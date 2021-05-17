@@ -584,11 +584,6 @@ public abstract class PhotoPage extends ActivityState implements
             return false;
         }
         switch(control) {
-            case R.id.photopage_bottom_control_edit:
-                return mHaveImageEditor && mShowBars && !mReadOnlyView
-                        && !mPhotoView.getFilmMode()
-                        && (mCurrentPhoto.getSupportedOperations() & MediaItem.SUPPORT_EDIT) != 0
-                        && mCurrentPhoto.getMediaType() == MediaObject.MEDIA_TYPE_IMAGE;
             case R.id.photopage_bottom_control_panorama:
                 return mIsPanorama;
             case R.id.photopage_bottom_control_tiny_planet:
@@ -602,9 +597,6 @@ public abstract class PhotoPage extends ActivityState implements
     @Override
     public void onBottomControlClicked(int control) {
         switch(control) {
-            case R.id.photopage_bottom_control_edit:
-                launchPhotoEditor();
-                return;
             case R.id.photopage_bottom_control_panorama:
                 mActivity.getPanoramaViewHelper()
                         .showPanorama(mCurrentPhoto.getContentUri());

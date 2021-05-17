@@ -27,7 +27,7 @@
             android:title="@string/share_panorama"
             android:visible="false"
             android:actionProviderClass="android.widget.ShareActionProvider"
-            android:showAsAction="ifRoom" />
+            android:showAsAction="never" />
     <item android:id="@+id/action_share"
             android:icon="@drawable/ic_menu_share_holo_light"
             android:title="@string/share"
@@ -38,15 +38,11 @@
             android:icon="@drawable/ic_menu_trash_holo_light"
             android:title="@string/delete"
             android:visible="false"
-            android:showAsAction="never" />
+            android:showAsAction="always" />
     <item android:id="@+id/action_slideshow"
             android:icon="@drawable/ic_menu_slideshow_holo_light"
             android:title="@string/slideshow"
             android:showAsAction="never" />
-    <item android:id="@+id/action_edit"
-            android:title="@string/edit"
-            android:showAsAction="never"
-            android:visible="false" />
     <item android:id="@+id/action_simple_edit"
           android:title="@string/simple_edit"
           android:showAsAction="never"
@@ -57,9 +53,6 @@
     <item android:id="@+id/action_rotate_cw"
             android:showAsAction="never"
             android:title="@string/rotate_right" />
-    <item android:id="@+id/action_crop"
-            android:title="@string/crop_action"
-            android:showAsAction="never" />
     <item android:id="@+id/action_trim"
             android:title="@string/trim_action"
             android:showAsAction="never" />
